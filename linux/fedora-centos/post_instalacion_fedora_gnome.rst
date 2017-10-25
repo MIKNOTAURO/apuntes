@@ -4,7 +4,7 @@
 Post instalación Fedora Gnome
 #############################
 
-**Fedora 25 Workstation**
+**Fedora 26 Workstation**
 
 :ref:`reference-linux-fedora-centos-post_instalacion_fedora`
 
@@ -13,9 +13,11 @@ Gnome Settings
 
 .. code-block:: bash
 
+    # Como usuario.
+
     # General
     gsettings set org.gnome.desktop.interface clock-show-date true
-    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
     gsettings set org.gnome.desktop.screensaver lock-enabled false
     gsettings set org.gnome.desktop.session idle-delay 900
     gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,close'
@@ -37,10 +39,15 @@ Gnome Settings
     gsettings set org.gnome.nautilus.desktop trash-icon-visible false
     gsettings set org.gnome.nautilus.desktop volumes-visible false
 
+    # Extension Logo Fedora
+    gsettings set org.fedorahosted.background-logo-extension logo-always-visible true
+    gsettings set org.fedorahosted.background-logo-extension logo-opacity 170
+
     # Files
     gsettings set org.gnome.nautilus.icon-view default-zoom-level 'standard'
     gsettings set org.gnome.nautilus.list-view use-tree-view true
     gsettings set org.gnome.nautilus.preferences default-folder-viewer 'icon-view'
+    gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 
     # Fuentes
     gsettings set org.gnome.desktop.interface monospace-font-name 'Dejavu Sans Mono 11'
@@ -59,15 +66,6 @@ Global Dark Theme
 
 Require reloguear.
 
-Terminix
-********
-
-.. code-block:: bash
-
-    dnf copr enable heikoada/terminix
-
-    dnf install -y terminix terminix-nautilus
-
 Desinstalar
 ***********
 
@@ -84,13 +82,14 @@ Programas básicos
 .. code-block:: bash
 
     dnf -y install \
+        arc-theme \
         dconf-editor \
         geary \
         gnome-tweak-tool \
         gparted \
         gpick \
         transmission-gtk \
-        yumex-dnf
+        dnfdragora-gui # yumex-dnf
 
 Firewalld
 *********

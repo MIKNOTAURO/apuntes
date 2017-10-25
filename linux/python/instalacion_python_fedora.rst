@@ -16,24 +16,24 @@ Virtualenvwrapper
 
 .. code-block:: bash
 
-    pip3 install virtualenvwrapper
-    # dnf install -y python3-virtualenvwrapper
+    # Como usuario
+    pip3 install --user virtualenvwrapper
 
 Editar ``.bashrc``
 
 .. code-block:: bash
 
-    # Como usuario normal
+    which python3
+    which virtualenvwrapper.sh
+
+.. code-block:: bash
+
     vim ~/.bashrc
 
     # Virtualenvwrapper
     export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
     export WORKON_HOME=$HOME/.virtualenvs
-    source /usr/bin/virtualenvwrapper.sh
-
-En ``source`` el valor de ``which virtualenvwrapper.sh``
-
-Reload ``~/.bashrc``
+    source ~/.local/bin/virtualenvwrapper.sh
 
 .. code-block:: bash
 
@@ -50,12 +50,14 @@ Entorno virtual **default**
         Django \
         flake8 \
         isort \
+        livereload \
+        pycodestyle \
         pydocstyle \
         Sphinx \
         sphinx-autobuild \
         sphinx-rtd-theme
 
-Comandos
+**Comandos**
 
 * mkvirtualenv // Crea un nuevo virtualenv
 * rmvirtualenv // Elimina un virtualenv existente
@@ -73,3 +75,10 @@ Python 3.4 en Centos 7
     yum install python34 python34-setuptools python34-devel redhat-rpm-config
 
     curl https://bootstrap.pypa.io/get-pip.py | python3.4
+
+Python 3.6 en Centos 7
+######################
+
+**No lo he probado**
+
+* https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-centos-7

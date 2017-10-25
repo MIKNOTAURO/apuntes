@@ -6,28 +6,6 @@ Repositorios Copr
 
 Algunos repos de ``copr``
 
-Neovim
-******
-
-* https://copr.fedorainfracloud.org/coprs/dperson/neovim/
-
-.. code-block:: bash
-
-    dnf copr -y enable dperson/neovim
-    dnf update -y
-    dnf install -y neovim
-
-terminix
-********
-
-* https://github.com/gnunn1/terminix#install-terminix
-
-.. code-block:: bash
-
-    dnf copr enable heikoada/terminix
-    dnf update -y
-    dnf install -y terminix
-
 Atom
 ****
 
@@ -36,14 +14,26 @@ Atom
 .. code-block:: bash
 
     dnf copr enable mosquito/atom
-    dnf update -y
     dnf install -y atom
 
-vscode
-******
+la-capitaine-icon-theme
+***********************
+
+* https://github.com/keeferrourke/la-capitaine-icon-theme
 
 .. code-block:: bash
 
-    dnf copr enable mosquito/vscode
-    dnf update -y
-    dnf install -y vscode
+    dnf copr enable tcg/themes
+    dnf install la-capitaine-icon-theme
+
+    gsettings set org.gnome.desktop.interface icon-theme 'La Capitaine'
+
+Dotnet core
+************
+
+* https://copr.fedorainfracloud.org/coprs/g/dotnet-sig/dotnet/
+
+.. code-block:: bash
+
+    dnf copr enable @dotnet-sig/dotnet
+    dnf install dotnet-sdk-2.0

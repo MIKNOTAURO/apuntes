@@ -21,6 +21,7 @@ Contents:
    escanear_redes_conectadas_en_lan
    firewall
    fuente_ubuntu
+   gnome_folder_colors
    instalar_golang
    post_instalacion_centos
    post_instalacion_fedora_gnome
@@ -29,5 +30,6 @@ Contents:
    postfix
    reglas_selinux
    reinstall_grup_post_install_windows
+   steam_nvidia_fedora
    virt_manager
    virtualbox

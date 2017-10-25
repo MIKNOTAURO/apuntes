@@ -4,7 +4,7 @@
 Post instalación Fedora
 #######################
 
-**Fedora 25**
+**Fedora 26**
 
 Actualizar
 **********
@@ -68,7 +68,10 @@ Programas básicos
         p7zip \
         p7zip-plugins \
         pwgen \
+        tilix \
+        tilix-nautilus \
         unrar \
+        util-linux-user \
         vim \
         wget
 
@@ -79,24 +82,26 @@ Opcionales
 
 .. code-block:: bash
 
+    dnf -y install chromium
+    dnf -y install gimp
+    dnf -y install zsh
+
+    dnf -y install meld
+    dnf -y install gitg
+    dnf -y install gedit-plugins
     dnf -y install breeze-icon-theme
     dnf -y install dia
-    dnf -y install gedit-plugins
-    dnf -y install gimp
-    dnf -y install gitg
+    dnf -y install gnome-todo
     dnf -y install gnome-builder
     dnf -y install gnome-calendar
     dnf -y install gnome-music
     dnf -y install gnome-photos
-    dnf -y install gnome-terminal-nautilus # Si no se instala terminix.
-    dnf -y install gnome-todo
+    dnf -y install gnome-terminal-nautilus # Si no se instala tilix.
     dnf -y install inkscape
     dnf -y install java-1.8.0-openjdk-devel
     dnf -y install krita
     dnf -y install levien-inconsolata-fonts
-    dnf -y install meld
     dnf -y install umbrello
-    dnf -y install zsh
 
 Idiomas
 *******

@@ -9,36 +9,43 @@ Instalación
 
 .. code-block:: bash
 
-    sudo dnf -y install nodejs npm
+    sudo dnf -y install nodejs
 
-Si después se actualiza **npm** con ``sudo npm install npm -g`` a la hora de actualizar el paquete
-**nodejs** dará problemas.
+Yarn
+****
+
+* https://yarnpkg.com/en/docs/install
+
+.. code-block:: bash
+
+    sudo wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo
+    sudo dnf install -y yarn
+
+Añdir ``~/.yarn/bin`` al **PATH**
+
+.. code-block:: bash
+
+    # ~/.bashrc
+    export PATH=$PATH:~/.yarn/bin
 
 Paquetes que instalo
-====================
-
-Los linters, se instalan a nivel local en los proyectos, no son necesarios.
+********************
 
 .. code-block:: bash
 
     # Comunes
-    sudo npm install -g bower
-    sudo npm install -g gulp
-    sudo npm install -g node-sass
-
-    # Opcionales
-    sudo npm install -g npm-check-updates
-    sudo npm install -g babel-cli
-    sudo npm install -g webpack
+    # Con yarn, sin sudo: yarn global add gulp node-sass eslint htmlhint stylelint stylelint-config-standard
+    sudo npm i -g gulp
+    sudo npm i -g node-sass
 
     # Linters
-    sudo npm install -g eslint
-    sudo npm install -g htmlhint
-    sudo npm install -g stylelint
-    sudo npm install -g stylelint-config-standard
+    sudo npm i -g eslint
+    sudo npm i -g htmlhint
+    sudo npm i -g stylelint
+    sudo npm i -g stylelint-config-standard
 
-Algunos comandos utiles
-***********************
+Algunos comandos utiles npm
+***************************
 
 .. code-block:: bash
 
